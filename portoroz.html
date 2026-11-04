@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Izola - Apartma Izola</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet" type="text/css">
+    <link href="animation.css" rel="stylesheet" type="text/css">
+    <link href="subpage.css" rel="stylesheet" type="text/css">
+    <style>
+        .hero {background: url("images/portoroz2.jpg") no-repeat center center/cover !important;}
+    </style>
+</head>
+<body>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid"> 
+        <a class="navbar-brand" href="index.html">Apartma Izola.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon"></span> 
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Domov</a></li>
+                <li class="nav-item dropdown"> 
+                    <a class="nav-link dropdown-toggle" href="#" id="okolicaDropdown" role="button" data-bs-toggle="dropdown"> Okolica <i class="fa-solid fa-chevron-down"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="izola.html">Izola</a></li>
+                        <li><a class="dropdown-item" href="portoroz.html">Portorož</a></li>
+                        <li><a class="dropdown-item" href="piran.html">Piran</a></li>
+                        <li><a class="dropdown-item" href="koper.html">Koper</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="apartma.html">Apartma</a></li>
+                <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+                <li class="nav-item"><a class="nav-link" href="rezervacija.html">Rezervacija</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1 class="title-slide">Portorož</h1>
+        <p class="text-fade lead">Doživite čar sredozemskega letovišča, kjer se sprostitev ob plaži prepleta z razkošjem in bogatim nočnim življenjem.</p>
+        <a href="#portoroz" class="btn-scale btn btn-light">Oglejte si <i class="fa-solid fa-arrow-down"></i></a> 
+    </div>
+</section>
+
+<!-- Information Section -->
+<div id="portoroz"> 
+    <section class="info-section">
+        <div class="container">
+            <h2>O Portorožu</h2>
+            <p class="text">
+                Portorož je eno najbolj znanih in priljubljenih letovišč v Sloveniji, ki leži ob Jadranskem morju. Znano je po svojih peščenih plažah, luksuznih hotelih, zdraviliščih ter bogati turistični ponudbi. Že v 19. stoletju je bil priljubljena destinacija za aristokracijo in premožnejše goste, danes pa privablja obiskovalce z vsega sveta.
+                <br><br>
+                Mesto ponuja številne možnosti za sprostitev in rekreacijo – od spa centrov in wellness storitev do vodnih športov, kolesarjenja in sprehodov ob morju. Ob večerih pa Portorož oživi z restavracijami, kavarnami, igralnicami ter bogatim nočnim življenjem.
+                <br><br>
+                V neposredni bližini se nahaja tudi Sečoveljske soline, kjer lahko obiskovalci spoznajo tradicionalno pridelavo soli ter uživajo v edinstvenem naravnem okolju. Poleg tega Portorož gosti številne kulturne in zabavne dogodke, ki poskrbijo za nepozabno izkušnjo.
+            </p>
+            <br>
+            <ul>
+                <li><i class="fas fa-landmark"></i> Zgodovinske znamenitosti in luksuzni hoteli</li>
+                <li><i class="fas fa-umbrella-beach"></i> Peščene plaže in kristalno čisto morje</li>
+                <li><i class="fas fa-utensils"></i> Odlična kulinarika in morske specialitete</li>
+                <li><i class="fas fa-calendar-alt"></i> Znani festivali, koncerti in prireditve</li>
+                <li><i class="fas fa-users"></i> Spa centri, wellness in zabavno nočno življenje</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<!-- Carousel Section -->
+<div class="bg-light"> <br>
+    <br>
+    <div id="izolaCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active"> <img src="images/portoroz1.jpg" class="d-block w-100" alt="Portorož"> </div>
+            <div class="carousel-item"> <img src="images/portoroz2.jpg" class="d-block w-100" alt="Portorož"> </div>
+            <div class="carousel-item"> <img src="images/portoroz4.jpg" class="d-block w-100" alt="Portorož"> </div>
+            <div class="carousel-item"> <img src="images/portoroz5.jpg" class="d-block w-100" alt="Portorož"> </div>
+            <div class="carousel-item"> <img src="images/portoroz6.jpg" class="d-block w-100" alt="Portorož"> </div>
+            <div class="carousel-item"> <img src="images/portoroz7.jpg" class="d-block w-100" alt="Portorož"> </div>
+            <div class="carousel-item"> <img src="images/portoroz8.jpg" class="d-block w-100" alt="Portorož"> </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#izolaCarousel" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Prejšnji</span> </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#izolaCarousel" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Naslednji</span> </button>
+    </div>
+    <br>
+    <br>
+</div>
+
+<!-- Mobile Grid Gallery -->
+<div class="grid-gallery">
+    <img src="images/portoroz1.jpg" alt="Portorož">
+    <img src="images/portoroz2.jpg" alt="Portorož">
+    <img src="images/portoroz9.jpg" alt="Portorož">
+    <img src="images/portoroz4.jpg" alt="Portorož">
+    <img src="images/portoroz5.jpg" alt="Portorož">
+    <img src="images/portoroz6.jpg" alt="Portorož">
+    <img src="images/portoroz7.jpg" alt="Portorož">
+    <img src="images/portoroz8.jpg" alt="Portorož">
+</div>
+
+<!-- Dark Mode Toggle Button -->
+<button id="darkModeToggle" class="btn btn-light" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;"> <i class="fas fa-moon"></i> </button>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Apartma Izola | Vse pravice pridržane</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ivanka.lovric.129" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.booking.com/hotel/si/new-classic-cozy-apartment-in-izola.sl.html?aid=356980&label=gog235jc-1FCAsoywFCI25ldy1jbGFzc2ljLWNvenktYXBhcnRtZW50LWluLWl6b2xhSAVYA2jLAYgBApgBI7gBCcgBEdgBAegBAfgBDIgCAagCA7gCydWLvAbAAgHSAiQwZmZhOWViZi01MzE5LTRkMmQtOTBmMS03ZTllNzBiMWM2MmTYAgbgAgE&sid=fca94dbb27b9cd8f7638432e252d7187&dest_id=-83099&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1741280046&srpvid=af3076d4051c04ac&type=total&ucfs=1&"><img src="images/booking.svg" alt="Booking Icon" class="booking-icon"></a>
+
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS --> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+<script>
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    darkModeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+
+    // Select all elements with bg-light and bg-dark and toggle between them
+    document.querySelectorAll('.bg-light, .bg-dark').forEach(element => {
+        if (isDarkMode) {
+            element.classList.remove('bg-light');
+            element.classList.add('bg-dark');
+        } else {
+            element.classList.remove('bg-dark');
+            element.classList.add('bg-light');
+        }
+    });
+});
+</script>
+<!-- Dropdown Chevron Animation -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownToggle = document.getElementById('okolicaDropdown');
+    const chevronIcon = dropdownToggle.querySelector('.fa-chevron-down');
+    
+    // Listen for when the dropdown is shown or hidden
+    dropdownToggle.addEventListener('click', function() {
+        chevronIcon.classList.toggle('rotate');
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.title-slide {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideIn .5s forwards;
+    animation-delay: 0.3s; 
+}
+
+.text-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn .7s forwards;
+    animation-delay: 0.7s; 
+}
+
+.btn-scale {
+    opacity: 0;
+    transform: scale(0);
+    animation: scaleIn 0.5s forwards;
+    animation-delay: 1s; 
+}

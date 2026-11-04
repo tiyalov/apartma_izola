@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt - Apartma Izola</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- FontAwesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+<!-- FullCalendar CSS -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+<!-- FullCalendar JS --> 
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+<link href="navbar.css" rel="stylesheet" type="text/css">
+<style>
+    .hero {
+         background: url("images/zahod.jpg") no-repeat center center/cover !important;
+    }
+/* FullCalendar Dark Mode Styles */
+body.dark-mode .fc {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+}
+body.dark-mode .fc-toolbar {
+    background-color: #1e1e1e !important;
+    color: #ffffff;
+}
+body.dark-mode .fc-button {
+    background-color: #333333 !important;
+    color: #ffffff;
+}
+body.dark-mode .fc-button:hover {
+    background-color: #555555 !important;
+}
+body.dark-mode .fc-daygrid {
+    background-color: #1a1a1a !important;
+}
+body.dark-mode .fc-daygrid-day {
+    background-color: #1a1a1a !important;
+    border: 1px solid #444444 !important;
+}
+body.dark-mode .fc-daygrid-day-number {
+    color: #ffffff !important;
+}
+/* styling for today */
+body:not(.dark-mode) .fc-daygrid-day.fc-day-today {
+    background-color: #f0f0f0 !important;
+    color: #000000 !important;
+    border: 2px solid #ccc !important;
+}
+body.dark-mode .fc-scrollgrid-sync-inner {
+    background-color: #121212 !important;
+}
+/* today in dark mode */
+body.dark-mode .fc-daygrid-day.fc-day-today {
+    border: 2px solid #0d6dfd !important;
+}
+body.dark-mode .fc-toolbar-title {
+    color: #0d6dfd;
+}
+    /* Modal Styling */
+.modal-header {
+  background-color: #3b5998;
+  color: white;
+  z-index: 99999999;
+}
+/* Custom Modal Positioning */
+.modal-lower {
+  margin-top: 100px; /* Adjust this value to move the modal lower */
+}
+/* FullCalendar */
+#calendar {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+  text-decoration: none;
+}
+/* Calendar Header */
+.fc-toolbar-title {
+  font-family: "Poetsen One", sans-serif;
+  font-size: 22px;
+  color: #3b5998;
+}
+/* Calendar Buttons */
+.fc-button {
+  background-color: #5072A7 !important;
+  border: none !important;
+  color: white !important;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+.fc-button:hover {
+  background-color: #3b5998 !important;
+}
+/* Reserved Dates Styling */
+.fc-daygrid-event {
+  background-color: red !important;
+  border: none !important;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 3px;
+}
+/* Hover Effect for Days */
+.fc-daygrid-day {
+  transition: background-color 0.3s ease-in-out;
+}
+.fc-daygrid-day:hover {
+  background: rgba(80, 114, 167, 0.2);
+  cursor: pointer;
+}
+/* Selected Date */
+.selected-date {
+  background-color: #3b5998 !important;
+  color: white !important;
+  border-radius: 50%;
+}
+.fc-col-header-cell-cushion {
+  text-decoration: none;
+}
+.fc-daygrid-day-number {
+  text-decoration: none;
+}
+</style>
+<link href="animation.css" rel="stylesheet" type="text/css">
+<link href="subpage.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid"> <a class="navbar-brand" href="index.html">Apartma Izola.</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Domov</a></li>
+        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="okolicaDropdown" role="button" data-bs-toggle="dropdown"> Okolica <i class="fa-solid fa-chevron-down"></i> </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="izola.html">Izola</a></li>
+            <li><a class="dropdown-item" href="portoroz.html">Portorož</a></li>
+            <li><a class="dropdown-item" href="piran.html">Piran</a></li>
+            <li><a class="dropdown-item" href="koper.html">Koper</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="apartma.html">Apartma</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+        <li class="nav-item"><a class="nav-link" href="rezervacija.html">Rezervacija</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+  <div class="hero-content">
+    <h1 class="title-slide">Rezervirajte svoj termin</h1>
+    <p class="text-fade">Izberite datum in rezervirajte svoj termin!</p>
+    <a href="#calendar" class="btn-scale btn btn-light">Izberi datum <i class="fa-solid fa-arrow-down"></i></a> </div>
+</div>
+
+<!-- Reservation Calendar Section -->
+<div class="info-section">
+  <div class="container"> <br>
+    <h2>Koledar rezervacij</h2>
+    <br>
+    <div id="calendar"></div>
+  </div>
+</div>
+
+<!-- Reservation Modal -->
+<div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lower">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reservationModalLabel">Rezervacija termina</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="reservationForm">
+          <div class="mb-3">
+            <label for="selectedDate" class="form-label">Izbrani datum:</label>
+            <input type="text" class="form-control" id="selectedDate" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="userName" class="form-label">Vaše ime:</label>
+            <input type="text" class="form-control" id="userName" required>
+          </div>
+          <div class="mb-3">
+            <label for="userEmail" class="form-label">E-pošta:</label>
+            <input type="email" class="form-control" id="userEmail" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Potrdi rezervacijo</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dark Mode Toggle Button -->
+<button id="darkModeToggle" class="btn btn-light" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;"> <i class="fas fa-moon"></i> </button>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Apartma Izola | Vse pravice pridržane</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ivanka.lovric.129" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.booking.com/hotel/si/new-classic-cozy-apartment-in-izola.sl.html?aid=356980&label=gog235jc-1FCAsoywFCI25ldy1jbGFzc2ljLWNvenktYXBhcnRtZW50LWluLWl6b2xhSAVYA2jLAYgBApgBI7gBCcgBEdgBAegBAfgBDIgCAagCA7gCydWLvAbAAgHSAiQwZmZhOWViZi01MzE5LTRkMmQtOTBmMS03ZTllNzBiMWM2MmTYAgbgAgE&sid=fca94dbb27b9cd8f7638432e252d7187&dest_id=-83099&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1741280046&srpvid=af3076d4051c04ac&type=total&ucfs=1&"><img src="images/booking.svg" alt="Booking Icon" class="booking-icon"></a>
+
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap & FullCalendar JS --> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script> 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var reservedDates = []; // Store reserved dates
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        selectable: true,
+        locale: 'sl',
+        dateClick: function(info) {
+            if (reservedDates.includes(info.dateStr)) {
+                alert('Ta datum je že rezerviran.');
+                return;
+            }
+            document.getElementById('selectedDate').value = info.dateStr;
+            var modal = new bootstrap.Modal(document.getElementById('reservationModal'));
+            modal.show();
+        },
+        events: function(fetchInfo, successCallback, failureCallback) {
+            successCallback(reservedDates.map(date => ({
+                title: 'Zasedeno',
+                start: date,
+                color: 'red'
+            })));
+        }
+    });
+    calendar.render();
+
+    // Handle form submission
+    document.getElementById('reservationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var selectedDate = document.getElementById('selectedDate').value;
+        var userName = document.getElementById('userName').value;
+        var userEmail = document.getElementById('userEmail').value;
+
+        if (!selectedDate || !userName || !userEmail) {
+            alert('Prosimo, izpolnite vsa polja.');
+            return;
+        }
+
+        reservedDates.push(selectedDate);
+        calendar.refetchEvents();
+
+        alert('Rezervacija uspešno opravljena!');
+
+        var modal = bootstrap.Modal.getInstance(document.getElementById('reservationModal'));
+        modal.hide();
+
+        document.getElementById('reservationForm').reset();
+    });
+  });
+
+  // Dark Mode Toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('click', function() {
+    // Toggle the dark mode class
+    document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+
+    // Change the icon on the button
+    darkModeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+
+    // Select all elements with bg-light and toggle between bg-light and bg-dark
+    document.querySelectorAll('.bg-light, .bg-dark').forEach(element => {
+        if (isDarkMode) {
+            element.classList.remove('bg-light');
+            element.classList.add('bg-dark');
+        } else {
+            element.classList.remove('bg-dark');
+            element.classList.add('bg-light');
+        }
+    });
+
+    // apply dark mode styles
+    if (isDarkMode) {
+        calendar.setOption('themeSystem', 'standard');  
+    } else {
+        calendar.setOption('themeSystem', 'bootstrap');  // Revert to default theme when dark mode is off
+    }
+    calendar.render();  // Force re-render to apply changes
+});
+    
+// Dropdown Chevron Animation 
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdownToggle = document.getElementById('okolicaDropdown');
+        const chevronIcon = dropdownToggle.querySelector('.fa-chevron-down');
+        
+        // Listen for when the dropdown is shown or hidden
+        dropdownToggle.addEventListener('click', function() {
+            chevronIcon.classList.toggle('rotate');
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+@charset "utf-8";
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 100px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.bg-light, .bg-dark {
+    transition: background-color 0.3s ease; 
+}
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+.bg-light {
+    background-color: #f8f9fa;
+}
+.bg-dark {
+    background-color: #343a40;
+}
+.navbar {
+    background-color: #5072A7;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 100000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Poetsen One", sans-serif;
+    margin-bottom: 0;
+}
+.navbar-toggler {
+    border: none !important;
+}
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"%3E%3Cpath stroke="%23fff" stroke-linecap="round" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E') !important;
+    color: white;
+    margin-left: auto;
+}
+.navbar-brand, .nav-link {
+    color: white !important;
+    font-weight: 400;
+}
+.nav-link {
+    position: relative;
+    color: white !important;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+/* Disable hover when hamburger is visible */
+@media (max-width: 991.98px) {
+    .nav-link:hover::after {
+        transform: scaleX(0);
+    }
+    .nav-link {
+        transition: none;
+    }
+}
+/* Footer */
+footer {
+    background-color: #3b5998;
+    color: #ecf0f1;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px 0;
+}
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+/* Dropdown Menu Styling */
+.navbar .dropdown-menu {
+    background-color: #5072A7;
+    border: none;
+}
+.navbar .dropdown-item {
+    color: white;
+    font-weight: 400;
+}
+.navbar .dropdown-item:hover {
+    background-color: #4A6B96;
+    color: #ecf0f1;
+}
+ .booking-icon {
+            width: 50px; 
+            height: 50px;
+            vertical-align: middle; 
+        }
